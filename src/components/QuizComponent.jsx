@@ -96,7 +96,6 @@ const QuizComponent = () => {
         });
 
         setCorrectCount(correctAnswers);
-        setShowResults(true);
         setLoading(true);
 
         try {
@@ -115,6 +114,7 @@ const QuizComponent = () => {
             );
             console.log('Student result submitted:', result);
             setLoading(false);
+            setShowResults(true);
         } catch (error) {
             console.error('Error submitting result to Appwrite:', error);
         }
