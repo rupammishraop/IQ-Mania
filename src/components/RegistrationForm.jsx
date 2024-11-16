@@ -92,7 +92,7 @@ const RegistrationForm = () => {
                     />
                 </div>
                 <h2 className="text-2xl font-bold text-center text-blue-600">
-                    Registration for Q-Mania
+                    Registration for IQ-Mania
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
