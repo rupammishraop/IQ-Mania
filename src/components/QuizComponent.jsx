@@ -81,28 +81,145 @@ const QuizComponent = () => {
 
 
     const originalQuestions = [
-        { question: "What is the chemical formula for water?", options: ["H2O", "CO2", "O2", "NaCl"], answer: "H2O" },
-        { question: "What is the capital of India?", options: ["New Delhi", "Mumbai", "Kolkata", "Chennai"], answer: "New Delhi" },
-        { question: "Who discovered gravity?", options: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"], answer: "Isaac Newton" },
-        { question: "What is the square root of 64?", options: ["6", "7", "8", "9"], answer: "8" },
-        { question: "Which gas is most abundant in Earth's atmosphere?", options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"], answer: "Nitrogen" },
-        { question: "What is the SI unit of force?", options: ["Joule", "Pascal", "Newton", "Watt"], answer: "Newton" },
-        { question: "Who wrote the Indian National Anthem?", options: ["Rabindranath Tagore", "Sarojini Naidu", "Bankim Chandra Chatterjee", "Subhash Chandra Bose"], answer: "Rabindranath Tagore" },
-        { question: "What is the Pythagorean theorem?", options: ["a² + b² = c²", "a² - b² = c²", "a + b = c", "a × b = c"], answer: "a² + b² = c²" },
-        { question: "What is the boiling point of water in Celsius?", options: ["90°C", "100°C", "110°C", "120°C"], answer: "100°C" },
-        { question: "Which planet is known as the Red Planet?", options: ["Venus", "Mars", "Jupiter", "Mercury"], answer: "Mars" },
-        { question: "What is the value of π (pi) up to two decimal places?", options: ["3.12", "3.14", "3.16", "3.18"], answer: "3.14" },
-        { question: "Who is known as the Father of the Indian Constitution?", options: ["Mahatma Gandhi", "B. R. Ambedkar", "Jawaharlal Nehru", "Sardar Patel"], answer: "B. R. Ambedkar" },
-        { question: "Which organ is responsible for pumping blood in the human body?", options: ["Lungs", "Liver", "Heart", "Kidneys"], answer: "Heart" },
-        { question: "What is the chemical symbol for gold?", options: ["Au", "Ag", "Fe", "Pb"], answer: "Au" },
-        { question: "What is the speed of light in a vacuum?", options: ["3 × 10^6 m/s", "3 × 10^7 m/s", "3 × 10^8 m/s", "3 × 10^9 m/s"], answer: "3 × 10^8 m/s" }
+        {
+            question: "Which poet is known as the National Poet?",
+            hindiQuestion: "किस कवि को राष्ट्र कवि कहा जाता है?",
+            options: ["Makhanlal Chaturvedi", "Maithili Sharan Gupt", "Subhadra Kumari Chauhan", "None of these"],
+            hindiOptions: ["माखनलाल चतुर्वेदी", "मैथिलीशरण गुप्त", "सुभद्राकुमारी चौहान", "इनमें से कोई नहीं"],
+            answer: "Maithili Sharan Gupt",
+            hindiAnswer: "मैथिलीशरण गुप्त"
+        },
+        {
+            question: "Choose the correct tense to complete the sentence: By next year, they ____ in this city for ten years.",
+            hindiQuestion: "वाक्य पूरा करने के लिए सही काल चुनें: अगले वर्ष तक, वे इस शहर में दस वर्षों तक ____।",
+            options: ["live", "will live", "have lived", "will have lived"],
+            hindiOptions: ["रहेंगे", "रहते होंगे", "रहे हैं", "रह चुके होंगे"],
+            answer: "will have lived",
+            hindiAnswer: "रह चुके होंगे"
+        },
+        {
+            question: "Which component connects peripherals to the motherboard?",
+            hindiQuestion: "कौन सा घटक बाह्य उपकरणों को मदरबोर्ड से जोड़ता है?",
+            options: ["USB", "PCI", "SATA", "HDMI"],
+            hindiOptions: ["यूएसबी", "पीसीआई", "साटा", "एचडीएमआई"],
+            answer: "USB",
+            hindiAnswer: "यूएसबी"
+        },
+        {
+            question: "Genetics is a study of:",
+            hindiQuestion: "जेनेटिक्स का अध्ययन है:",
+            options: ["Development of organisms", "Mechanism of inheritance", "Nuclear division", "Variation between species"],
+            hindiOptions: ["जीवों का विकास", "वंशानुक्रम की प्रक्रिया", "नाभिकीय विभाजन", "प्रजातियों के बीच अंतर"],
+            answer: "Mechanism of inheritance",
+            hindiAnswer: "वंशानुक्रम की प्रक्रिया"
+        },
+        {
+            question: "What is the result when you reduce Rs. 80 by 11%?",
+            hindiQuestion: "रु. 80 को 11% घटाने पर परिणाम क्या होगा?",
+            options: ["Rs 71.20", "Rs 69", "Rs 69.90", "Rs 69.20"],
+            hindiOptions: ["रु 71.20", "रु 69", "रु 69.90", "रु 69.20"],
+            answer: "Rs 71.20",
+            hindiAnswer: "रु 71.20"
+        },
+        {
+            question: "What is the genre of 'Shatranj ke Khiladi'?",
+            hindiQuestion: "शतरंज के खिलाड़ी की विधा क्या है?",
+            options: ["Poetry", "Story", "One-act play", "Drama"],
+            hindiOptions: ["कविता", "कहानी", "एकांकी", "नाटक"],
+            answer: "Story",
+            hindiAnswer: "कहानी"
+        },
+        {
+            question: "The news about the recent discoveries ____ really exciting.",
+            hindiQuestion: "हाल की खोजों के बारे में खबर ____ वास्तव में रोमांचक है।",
+            options: ["are", "is", "were", "have"],
+            hindiOptions: ["हैं", "है", "थे", "हुए"],
+            answer: "is",
+            hindiAnswer: "है"
+        },
+        {
+            question: "Which device reads optical discs?",
+            hindiQuestion: "कौन सा उपकरण ऑप्टिकल डिस्क को पढ़ता है?",
+            options: ["CD drive", "DVD drive", "Hard drive", "SSD"],
+            hindiOptions: ["सीडी ड्राइव", "डीवीडी ड्राइव", "हार्ड ड्राइव", "एसएसडी"],
+            answer: "DVD drive",
+            hindiAnswer: "डीवीडी ड्राइव"
+        },
+        {
+            question: "Nandan-kanan zoo is popular for its?",
+            hindiQuestion: "नंदन-कानन चिड़ियाघर इसके लिए लोकप्रिय है?",
+            options: ["Nilgiri tahr", "Whale", "White tiger", "Hippo"],
+            hindiOptions: ["नीलगिरी तहर", "व्हेल", "सफेद बाघ", "दरियाई घोड़ा"],
+            answer: "White tiger",
+            hindiAnswer: "सफेद बाघ"
+        },
+        {
+            question: "The value of (x – y)(x + y) + (y – z)(y + z) + (z – x)(z + x) is:",
+            hindiQuestion: "(x – y)(x + y) + (y – z)(y + z) + (z – x)(z + x) का मान क्या है?",
+            options: ["x + y + z", "x² + y² + z²", "xy + yz + zx", "0"],
+            hindiOptions: [],
+            answer: "0",
+            hindiAnswer: "0"
+        },
+        {
+            question: "Who is the author of the essay 'Bharat Ek Hai'?",
+            hindiQuestion: '"भारत एक है" निबंध के लेखक हैं?',
+            options: ["Dr. Tribhuwan Nath Shukla", "Sharad Joshi", "Heera Lal", "Ramdhari Singh Dinkar"],
+            hindiOptions: ["डॉ. त्रिभुवन नाथ शुक्ल", "शरद जोशी", "हीरा लाल", "रामधारी सिंह दिनकर"],
+            answer: "Ramdhari Singh Dinkar",
+            hindiAnswer: "रामधारी सिंह दिनकर"
+        },
+        {
+            question: "Which of the following options cannot be converted into passive voice?",
+            hindiQuestion: "निम्नलिखित में से कौन सा विकल्प निरोधात्मक वाक्य में परिवर्तित नहीं किया जा सकता है?",
+            options: [
+                "She sang a beautiful song.",
+                "He is driving the car.",
+                "The children played outside.",
+                "She sleeps soundly."
+            ],
+            hindiOptions: [
+                "उसने एक सुंदर गीत गाया।",
+                "वह कार चला रहा है।",
+                "बच्चे बाहर खेले।",
+                "वह शांति से सोती है।"
+            ],
+            answer: "She sleeps soundly.",
+            hindiAnswer: "वह शांति से सोती है।"
+        },
+        {
+            question: "Which type of memory is typically the fastest?",
+            hindiQuestion: "किस प्रकार की मेमोरी आमतौर पर सबसे तेज़ होती है?",
+            options: ["RAM", "Cache memory", "SSD", "HDD"],
+            hindiOptions: ["रैम", "कैश मेमोरी", "एसएसडी", "एचडीडी"],
+            answer: "Cache memory",
+            hindiAnswer: "कैश मेमोरी"
+        },
+        {
+            question: "Tubectomy is carried out by blocking the?",
+            hindiQuestion: "ट्यूबेक्टोमी को अवरुद्ध करके किया जाता है?",
+            options: ["Oviduct", "Uterus", "Cervix", "Vagina"],
+            hindiOptions: ["अंडवाहिनी", "गर्भाशय", "गर्भाशय ग्रीवा", "योनि"],
+            answer: "Oviduct",
+            hindiAnswer: "अंडवाहिनी"
+        },
+        {
+            question: "Which of the following are positive directions?",
+            hindiQuestion: "निम्नलिखित में से कौन से सकारात्मक दिशाएँ हैं?",
+            options: ["OX’ and OY’", "OX and OY’", "OX’ and OY", "OX and OY"],
+            hindiOptions: ["OX’ और OY’", "OX और OY’", "OX’ और OY", "OX और OY"],
+            answer: "OX and OY",
+            hindiAnswer: "OX और OY"
+        }
+        // Add more questions in a similar format
     ];
+
 
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState("");
     const [answers, setAnswers] = useState({});
-    const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes in seconds
+    const [timeLeft, setTimeLeft] = useState(1 * 60); // 15 minutes in seconds
     const [showIntroModal, setShowIntroModal] = useState(true); // Intro modal state
     const [showResults, setShowResults] = useState(false);
     const [correctCount, setCorrectCount] = useState(0);
@@ -245,7 +362,7 @@ const QuizComponent = () => {
                             <div
                                 id="entryImg"
                                 className="fixed  flex items-center justify-center bg-transparent  "
-                                
+
                             >
                                 <div className="p-6 bg-black bg-opacity-75 rounded-lg shadow-lg">
                                     <h2 className="text-2xl font-bold text-center text-white">Are you ready for the Quiz?</h2>
@@ -284,8 +401,15 @@ const QuizComponent = () => {
 
 
 
-                                <h3 className="text-3xl font-semibold mt-10">
-                                    Question {currentQuestionIndex + 1}: {questions[currentQuestionIndex].question}
+                                <h3 className="text-2xl font-semibold mt-10">
+                                    <span className="block text-center w-full text-red-500">Question {currentQuestionIndex + 1}</span>
+
+                                    {questions[currentQuestionIndex].question}
+                                    <div>
+                                        {questions[currentQuestionIndex].hindiQuestion}
+                                    </div>
+
+
                                 </h3>
                                 <div className="mt-8 space-y-5 text-2xl">
                                     {questions[currentQuestionIndex].options.map((option, index) => (
@@ -299,6 +423,10 @@ const QuizComponent = () => {
                                                 className="form-radio text-blue-600"
                                             />
                                             <span>{option}</span>
+                                            {questions[currentQuestionIndex].hindiOptions?.[index] && (
+                                                <span className="text-gray-900">({questions[currentQuestionIndex].hindiOptions[index]})</span>
+                                            )}
+
                                         </label>
                                     ))}
                                 </div>
