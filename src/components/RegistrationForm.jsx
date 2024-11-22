@@ -83,24 +83,29 @@ const RegistrationForm = () => {
 
             {/* Registration Form */}
             <div className="relative z-10 w-full max-w-md p-8 space-y-6 bg-white shadow-lg rounded-lg">
-                <div className="flex items-center justify-center ">
+                <div className="flex flex-col items-center justify-center ">
+                    
                     <img
                         id="clgLogo"
                         className="w-32 h-auto"
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8Dd0riPysu6qXugKi2zrXV6MS-u14R-MqA&s"
                         alt="Mittal Logo"
                     />
+                    <div>
+                    <p className=' underline text-3xl font-serif text-red-700 mt-2 text-center  p-2'>Mittal Group Of Institutes</p>
+                    <p className='text-center text-3xl font-serif text-blue-600  mt-4'>Welcomes You</p>
+                    </div>
                 </div>
-                <h2 className="text-2xl font-bold text-center text-blue-600">
+                <h2 className=" font-semibold  text-2xl  text-center text-blue-600">
                     Registration for Q-Mania
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label
                             htmlFor="studentName"
-                            className="block text-sm font-medium text-gray-700 ml-0"
+                            className=" block text-sm font-medium text-gray-900 ml-0"
                         >
-                            Student Name
+                            Team Leader Name
                         </label>
                         <input
                             type="text"
@@ -116,7 +121,7 @@ const RegistrationForm = () => {
                     <div>
                         <label
                             htmlFor="schoolName"
-                            className="block text-sm font-medium text-gray-700"
+                            className="block text-sm font-medium text-gray-900"
                         >
                             School Name
                         </label>
@@ -134,7 +139,7 @@ const RegistrationForm = () => {
                     <div>
                         <label
                             htmlFor="tokenNumber"
-                            className="block text-sm font-medium text-gray-700"
+                            className="block text-sm font-medium text-gray-900"
                         >
                             Token Number
                         </label>
@@ -151,7 +156,7 @@ const RegistrationForm = () => {
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 font-serif"
+                        className="w-full py-2 text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 font-serif"
                     >
                         Register
                     </button>
