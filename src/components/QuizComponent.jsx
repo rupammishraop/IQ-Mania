@@ -219,7 +219,7 @@ const QuizComponent = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState("");
     const [answers, setAnswers] = useState({});
-    const [timeLeft, setTimeLeft] = useState(1 * 60); // 15 minutes in seconds
+    const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes in seconds
     const [showIntroModal, setShowIntroModal] = useState(true); // Intro modal state
     const [showResults, setShowResults] = useState(false);
     const [correctCount, setCorrectCount] = useState(0);
@@ -336,7 +336,7 @@ const QuizComponent = () => {
                     <ClipLoader color="black" loading={loading} size={150} />
                 </div>
             ) : (
-                <div className="relative h-screen flex items-center justify-center overflow-hidden"
+                <div className="relative h-screen flex items-center justify-center "
                     onContextMenu={(e) => e.preventDefault()} >
                     {/* Background Animation */}
                     <div className="area fixed inset-0 -z-10 overflow-hidden">
