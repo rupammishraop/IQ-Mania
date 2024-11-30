@@ -6,6 +6,7 @@ import { Client, Databases, ID } from "appwrite";
 import ClipLoader from "react-spinners/ClipLoader";
 
 
+
 const QuizComponent = () => {
     const navigate = useNavigate();
     const { formData } = useFormData();
@@ -43,7 +44,7 @@ const QuizComponent = () => {
         } else if (document.msExitFullscreen) { // IE/Edge
             document.msExitFullscreen();
         }
-        setIsFullScreen(false);
+        
     };
 
     const toggleFullScreen = () => {
@@ -82,6 +83,94 @@ const QuizComponent = () => {
 
     const originalQuestions = [
         {
+            question: "Find the HCF of 48 and 180.",
+            hindiQuestion: "48 और 180 का HCF  ज्ञात कीजिए।",
+            options: ["6", "12", "24", "36"],
+            hindiOptions: [],
+            answer: "12",
+            hindiAnswer: "12"
+        },
+        {
+            question: "If the sum of two sides of an equilateral triangle is 16 cm, then find the third side.",
+            hindiQuestion: "यदि एक समबाहु त्रिभुज की दो भुजाओं का योग 16 सेमी है, तो तीसरी भुजा ज्ञात कीजिए।",
+            options: ["4 cm", "16 cm", "Cannot be found", "8 cm"],
+            hindiOptions: ["4 सेमी", "16 सेमी", "ज्ञात नहीं किया जा सकता", "8 सेमी"],
+            answer: "8 cm",
+            hindiAnswer: "8 सेमी"
+        },
+        {
+            question: "What is the sum of all angles of a hexagon?",
+            hindiQuestion: "षट्भुज के सभी कोणों का योग कितना होता है?",
+            options: ["540°", "720°", "900°", "1080°"],
+            hindiOptions: [],
+            answer: "720°",
+            hindiAnswer: "720°"
+        },
+        {
+            question: "Genetics is a study of:",
+            hindiQuestion: "जेनेटिक्स एक अध्ययन है:",
+            options: ["Development of organisms", "Mechanism of inheritance", "Nuclear division", "Variation between species"],
+            hindiOptions: ["जीवों का विकास", "विरासत की प्रक्रिया", "कोशिका विभाजन", "प्रजातियों के बीच भिन्नता"],
+            answer: "Mechanism of inheritance",
+            hindiAnswer: "विरासत की प्रक्रिया"
+        },
+        {
+            question: "The pH of which of the following is more than 7?",
+            hindiQuestion: "निम्नलिखित में से किसका pH मान 7 से अधिक है?",
+            options: ["Gastric Juice", "Vinegar", "Blood plasma", "Lemon Juice"],
+            hindiOptions: ["जठर रस", "सिरका", "रक्त प्लाज्मा", "नींबू का रस"],
+            answer: "Blood plasma",
+            hindiAnswer: "रक्त प्लाज्मा"
+        },
+        {
+            question: "Sound travels through which medium?",
+            hindiQuestion: "ध्वनि किस माध्यम से यात्रा करती है?",
+            options: ["Solid", "Liquid", "Gas", "All the above"],
+            hindiOptions: ["ठोस", "तरल", "गैस", "सभी"],
+            answer: "All the above",
+            hindiAnswer: "सभी"
+        },
+        {
+            question: "Which word is an example of a conjunction?",
+            hindiQuestion: "",
+            options: ["Because", "Very", "Quickly", "House"],
+            hindiOptions: [],
+            answer: "Because",
+            hindiAnswer: "क्योंकि"
+        },
+        {
+            question: "She sings ________ beautifully that everyone enjoys her performances.",
+            hindiQuestion: "",
+            options: ["so", "too", "such", "very"],
+            hindiOptions: [],
+            answer: "so",
+            hindiAnswer: "इतना"
+        },
+        {
+            question: "What is the correct plural form of the word 'cactus'?",
+            hindiQuestion: "'",
+            options: ["Cacti", "Cactuss", "Cactusies", "Cactuses"],
+            hindiOptions: [],
+            answer: "Cacti",
+            hindiAnswer: "कैकटस"
+        },
+        {
+            question: "The Dronacharya Award is awarded in which category of sports?",
+            hindiQuestion: "द्रोणाचार्य पुरस्कार खेल की किस श्रेणी में प्रदान किया जाता है?",
+            options: ["Players", "Coach", "Umpires", "Sports Journalists"],
+            hindiOptions: ["खिलाड़ी", "कोच", "अंपायर", "खेल पत्रकार"],
+            answer: "Coach",
+            hindiAnswer: "कोच"
+        },
+        {
+            question: "Usain Bolt is considered the greatest sprinter of all times. Which country does he belong to?",
+            hindiQuestion: "उसेन बोल्ट को सर्वकालिक महान धावक माना जाता है। वह किस देश के हैं?",
+            options: ["USA", "Kenya", "Jamaica", "Nigeria"],
+            hindiOptions: ["यूएसए", "केन्या", "जमैका", "नाइजीरिया"],
+            answer: "Jamaica",
+            hindiAnswer: "जमैका"
+        },
+        {
             question: "Which poet is known as the National Poet?",
             hindiQuestion: "किस कवि को राष्ट्र कवि कहा जाता है?",
             options: ["Makhanlal Chaturvedi", "Maithili Sharan Gupt", "Subhadra Kumari Chauhan", "None of these"],
@@ -90,129 +179,31 @@ const QuizComponent = () => {
             hindiAnswer: "मैथिलीशरण गुप्त"
         },
         {
-            question: "Choose the correct tense to complete the sentence: By next year, they ____ in this city for ten years.",
-            hindiQuestion: "वाक्य पूरा करने के लिए सही काल चुनें: अगले वर्ष तक, वे इस शहर में दस वर्षों तक ____।",
-            options: ["live", "will live", "have lived", "will have lived"],
-            hindiOptions: ["रहेंगे", "रहते होंगे", "रहे हैं", "रह चुके होंगे"],
-            answer: "will have lived",
-            hindiAnswer: "रह चुके होंगे"
-        },
-        {
-            question: "Which component connects peripherals to the motherboard?",
-            hindiQuestion: "कौन सा घटक बाह्य उपकरणों को मदरबोर्ड से जोड़ता है?",
-            options: ["USB", "PCI", "SATA", "HDMI"],
-            hindiOptions: ["यूएसबी", "पीसीआई", "साटा", "एचडीएमआई"],
-            answer: "USB",
-            hindiAnswer: "यूएसबी"
-        },
-        {
-            question: "Genetics is a study of:",
-            hindiQuestion: "जेनेटिक्स का अध्ययन है:",
-            options: ["Development of organisms", "Mechanism of inheritance", "Nuclear division", "Variation between species"],
-            hindiOptions: ["जीवों का विकास", "वंशानुक्रम की प्रक्रिया", "नाभिकीय विभाजन", "प्रजातियों के बीच अंतर"],
-            answer: "Mechanism of inheritance",
-            hindiAnswer: "वंशानुक्रम की प्रक्रिया"
-        },
-        {
-            question: "What is the result when you reduce Rs. 80 by 11%?",
-            hindiQuestion: "रु. 80 को 11% घटाने पर परिणाम क्या होगा?",
-            options: ["Rs 71.20", "Rs 69", "Rs 69.90", "Rs 69.20"],
-            hindiOptions: ["रु 71.20", "रु 69", "रु 69.90", "रु 69.20"],
-            answer: "Rs 71.20",
-            hindiAnswer: "रु 71.20"
-        },
-        {
-            question: "What is the genre of 'Shatranj ke Khiladi'?",
-            hindiQuestion: "शतरंज के खिलाड़ी की विधा क्या है?",
-            options: ["Poetry", "Story", "One-act play", "Drama"],
-            hindiOptions: ["कविता", "कहानी", "एकांकी", "नाटक"],
-            answer: "Story",
-            hindiAnswer: "कहानी"
-        },
-        {
-            question: "The news about the recent discoveries ____ really exciting.",
-            hindiQuestion: "हाल की खोजों के बारे में खबर ____ वास्तव में रोमांचक है।",
-            options: ["are", "is", "were", "have"],
-            hindiOptions: ["हैं", "है", "थे", "हुए"],
-            answer: "is",
-            hindiAnswer: "है"
-        },
-        {
-            question: "Which device reads optical discs?",
-            hindiQuestion: "कौन सा उपकरण ऑप्टिकल डिस्क को पढ़ता है?",
-            options: ["CD drive", "DVD drive", "Hard drive", "SSD"],
-            hindiOptions: ["सीडी ड्राइव", "डीवीडी ड्राइव", "हार्ड ड्राइव", "एसएसडी"],
-            answer: "DVD drive",
-            hindiAnswer: "डीवीडी ड्राइव"
-        },
-        {
-            question: "Nandan-kanan zoo is popular for its?",
-            hindiQuestion: "नंदन-कानन चिड़ियाघर इसके लिए लोकप्रिय है?",
-            options: ["Nilgiri tahr", "Whale", "White tiger", "Hippo"],
-            hindiOptions: ["नीलगिरी तहर", "व्हेल", "सफेद बाघ", "दरियाई घोड़ा"],
-            answer: "White tiger",
-            hindiAnswer: "सफेद बाघ"
-        },
-        {
-            question: "The value of (x – y)(x + y) + (y – z)(y + z) + (z – x)(z + x) is:",
-            hindiQuestion: "(x – y)(x + y) + (y – z)(y + z) + (z – x)(z + x) का मान क्या है?",
-            options: ["x + y + z", "x² + y² + z²", "xy + yz + zx", "0"],
+            question: "",
+            hindiQuestion: "शब्दयुग्म का अर्थ है?",
+            options: ["शब्दों का जोड़ा", "शब्द का प्रयोग", "शब्दों की गिनती", "शब्दों की व्याख्या"],
             hindiOptions: [],
-            answer: "0",
-            hindiAnswer: "0"
+            answer: "Pair of words",
+            hindiAnswer: "शब्दों का जोड़ा"
         },
         {
-            question: "Who is the author of the essay 'Bharat Ek Hai'?",
-            hindiQuestion: '"भारत एक है" निबंध के लेखक हैं?',
-            options: ["Dr. Tribhuwan Nath Shukla", "Sharad Joshi", "Heera Lal", "Ramdhari Singh Dinkar"],
-            hindiOptions: ["डॉ. त्रिभुवन नाथ शुक्ल", "शरद जोशी", "हीरा लाल", "रामधारी सिंह दिनकर"],
-            answer: "Ramdhari Singh Dinkar",
-            hindiAnswer: "रामधारी सिंह दिनकर"
+            question: "What is the smallest unit of digital information?",
+            hindiQuestion: "डिजिटल सूचना की सबसे छोटी इकाई क्या है?",
+            options: ["Bit", "Byte", "Pixel", "Kilobyte"],
+            hindiOptions: ["बिट", "बाइट", "पिक्सेल", "किलोबाइट"],
+            answer: "Bit",
+            hindiAnswer: "बिट"
         },
         {
-            question: "Which of the following options cannot be converted into passive voice?",
-            hindiQuestion: "निम्नलिखित में से कौन सा विकल्प निरोधात्मक वाक्य में परिवर्तित नहीं किया जा सकता है?",
-            options: [
-                "She sang a beautiful song.",
-                "He is driving the car.",
-                "The children played outside.",
-                "She sleeps soundly."
-            ],
-            hindiOptions: [
-                "उसने एक सुंदर गीत गाया।",
-                "वह कार चला रहा है।",
-                "बच्चे बाहर खेले।",
-                "वह शांति से सोती है।"
-            ],
-            answer: "She sleeps soundly.",
-            hindiAnswer: "वह शांति से सोती है।"
-        },
-        {
-            question: "Which type of memory is typically the fastest?",
-            hindiQuestion: "किस प्रकार की मेमोरी आमतौर पर सबसे तेज़ होती है?",
-            options: ["RAM", "Cache memory", "SSD", "HDD"],
-            hindiOptions: ["रैम", "कैश मेमोरी", "एसएसडी", "एचडीडी"],
-            answer: "Cache memory",
-            hindiAnswer: "कैश मेमोरी"
-        },
-        {
-            question: "Tubectomy is carried out by blocking the?",
-            hindiQuestion: "ट्यूबेक्टोमी को अवरुद्ध करके किया जाता है?",
-            options: ["Oviduct", "Uterus", "Cervix", "Vagina"],
-            hindiOptions: ["अंडवाहिनी", "गर्भाशय", "गर्भाशय ग्रीवा", "योनि"],
-            answer: "Oviduct",
-            hindiAnswer: "अंडवाहिनी"
-        },
-        {
-            question: "Which of the following are positive directions?",
-            hindiQuestion: "निम्नलिखित में से कौन से सकारात्मक दिशाएँ हैं?",
-            options: ["OX’ and OY’", "OX and OY’", "OX’ and OY", "OX and OY"],
-            hindiOptions: ["OX’ और OY’", "OX और OY’", "OX’ और OY", "OX और OY"],
-            answer: "OX and OY",
-            hindiAnswer: "OX और OY"
+            question: "Which device is used to convert analog signals into digital signals?",
+            hindiQuestion: "एनालॉग सिग्नल को डिजिटल सिग्नल में बदलने के लिए किस उपकरण का उपयोग किया जाता है?",
+            options: ["Modem", "Scanner", "Printer", "Speaker"],
+            hindiOptions: ["मोडेम", "स्कैनर", "प्रिंटर", "स्पीकर"],
+            answer: "Modem",
+            hindiAnswer: "मोडेम"
         }
-        // Add more questions in a similar format
     ];
+
 
 
 
@@ -228,7 +219,25 @@ const QuizComponent = () => {
     let [loading, setLoading] = useState(false);
 
 
+    const [isQuizCompleted, setIsQuizCompleted] = useState(false); // Track quiz completion
 
+    useEffect(() => {
+        const handleBeforeUnload = (event) => {
+            event.preventDefault();
+            // Some browsers require this to be set
+            event.returnValue = '';
+        };
+        window.addEventListener('beforeunload', handleBeforeUnload);
+        return () => { window.removeEventListener('beforeunload', handleBeforeUnload); };
+    }, []);
+
+
+
+
+    // Handle quiz completion
+    const handleQuizCompletion = () => {
+        setIsQuizCompleted(true);
+    };
 
 
     useEffect(() => {
@@ -304,7 +313,7 @@ const QuizComponent = () => {
         } catch (error) {
             console.error('Error submitting result to Appwrite:', error);
         }
-
+        handleQuizCompletion(true);
         setLoading(false)
     };
 
@@ -315,13 +324,20 @@ const QuizComponent = () => {
     }
 
     const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
+
     const handleAreYouReady = () => {
-        setLoading(true);
-        const shuffledQuestions = shuffleArray(originalQuestions);
-        setQuestions(shuffledQuestions);
-        enterFullScreen();
-        setShowIntroModal(false);
-        setLoading(false);
+        if (formData == null) {
+            alert("Firstly you have registered yourself before running quiz");
+            navigate("/")
+        } else {
+            setLoading(true);
+            const shuffledQuestions = shuffleArray(originalQuestions);
+            setQuestions(shuffledQuestions);
+            enterFullScreen();
+            setShowIntroModal(false);
+            setLoading(false);
+        }
+
     }
 
 
@@ -380,6 +396,7 @@ const QuizComponent = () => {
                         {!showIntroModal && (
                             <div className="z-10 w-full max-w-3xl p-8 bg-gray-100 rounded-lg shadow-2xl mb-10">
                                 <h2 className="text-3xl font-bold text-center text-blue-600">Quiz Time</h2>
+                                <h2 className="text-3xl font-bold text-center text-blue-600">Round-2</h2>
                                 <div className="text-3xl font-bold text-black mt-4 text-center">
                                     Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
                                 </div>
@@ -433,7 +450,7 @@ const QuizComponent = () => {
                                 <div className="flex items-center justify-center mt-8">
                                     <ClipLoader color="black" loading={loading} size={150} />
                                 </div>
-                                <div className="flex justify-between mt-10">
+                                <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
                                     {/* Previous Button */}
                                     <button
                                         onClick={handlePrevious}

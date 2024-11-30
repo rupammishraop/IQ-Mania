@@ -92,7 +92,7 @@ const RegistrationForm = () => {
                         alt="Mittal Logo"
                     />
                     <div>
-                    <p className=' underline text-3xl font-serif text-red-700 mt-2 text-center  p-2'>Mittal Group Of Institutes</p>
+                    <p className='  text-3xl font-serif text-red-700 mt-2 text-center  p-2'>Mittal Group Of Institutes</p>
                     <p className='text-center text-3xl font-serif text-blue-600  mt-4'>Welcomes You</p>
                     </div>
                 </div>
