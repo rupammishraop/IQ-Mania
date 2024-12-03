@@ -44,7 +44,7 @@ const QuizComponent = () => {
         } else if (document.msExitFullscreen) { // IE/Edge
             document.msExitFullscreen();
         }
-        
+
     };
 
     const toggleFullScreen = () => {
@@ -80,15 +80,161 @@ const QuizComponent = () => {
     const [questions, setQuestions] = useState([]);
 
 
+    // round 3 all question
 
+    /*
     const originalQuestions = [
         {
             question: "Find the HCF of 48 and 180.",
-            hindiQuestion: "48 और 180 का HCF  ज्ञात कीजिए।",
+            hindiQuestion: "48 और 180 का HCF ज्ञात कीजिए।",
             options: ["6", "12", "24", "36"],
             hindiOptions: [],
             answer: "12",
             hindiAnswer: "12"
+        },
+        {
+            question: "The third Veda is?",
+            hindiQuestion: "तीसरा वेद है?",
+            options: ["Samaveda", "Atharvaveda", "Yajurveda", "Rigveda"],
+            hindiOptions: ["सामवेद", "अथर्ववेद", "यजुर्वेद", "ऋग्वेद"],
+            answer: "Yajurveda",
+            hindiAnswer: "यजुर्वेद"
+        },
+        {
+            question: "What is dramatic irony?",
+            hindiQuestion: "",
+            options: [
+                "When something turns out differently than expected",
+                "When a character says one thing but means another",
+                "When the audience knows something the characters do not",
+                "When a character directly addresses the audience"
+            ],
+            hindiOptions: [],
+            answer: "When the audience knows something the characters do not",
+            hindiAnswer: ""
+        },
+        {
+            question: "What does 'GUI' stand for in computer terms?",
+            hindiQuestion: "कंप्यूटर के संदर्भ में 'GUI' का क्या अर्थ है?",
+            options: [
+                "General User Interface",
+                "Graphical User Interface",
+                "Global Unifying Interface",
+                "Graphical Unified Interface"
+            ],
+            hindiOptions: [],
+            answer: "Graphical User Interface",
+            hindiAnswer: ""
+        },
+        {
+            question: "Fatty foods become rancid due to the process of?",
+            hindiQuestion: "वसायुक्त खाद्य पदार्थ किस प्रक्रिया के कारण बासी हो जाते हैं?",
+            options: ["Oxidation", "Corrosion", "Reduction", "Hydrogenation"],
+            hindiOptions: [],
+            answer: "Oxidation",
+            hindiAnswer: "ऑक्सीकरण"
+        },
+        {
+            question: "The area of the triangle with vertices (1, 2), (-4, -3), and (4, 1) is?",
+            hindiQuestion: "",
+            options: ["7 sq. units", "20 sq. units", "10 sq. units", "14 sq. units"],
+            hindiOptions: [],
+            answer: "10 sq. units",
+            hindiAnswer: ""
+        },
+        {
+            question: "Shankaracharya's birthplace is?",
+            hindiQuestion: "शंकराचार्य का जन्म स्थान है?",
+            options: ["Maharashtra", "Odisha", "Kerala", "Bengal"],
+            hindiOptions: ["महाराष्ट्र", "उड़ीसा", "केरल", "बंगाल"],
+            answer: "Kerala",
+            hindiAnswer: "केरल"
+        },
+        {
+            question: "Who wrote 'The Jungle Book'?",
+            hindiQuestion: "",
+            options: ["Roald Dahl", "Rudyard Kipling", "Lewis Carroll", "Dr. Seuss"],
+            hindiOptions: [],
+            answer: "Rudyard Kipling",
+            hindiAnswer: ""
+        },
+        {
+            question: "The first electronic digital computer contained?",
+            hindiQuestion: "प्रथम इलेक्ट्रॉनिक डिजिटल कंप्यूटर में शामिल है?",
+            options: ["Electronic valves", "Vacuum tubes", "Transistors", "Semiconductor memory"],
+            hindiOptions: [],
+            answer: "Vacuum tubes",
+            hindiAnswer: ""
+        },
+        {
+            question: "If the net external force on a body is zero, it has?",
+            hindiQuestion: "यदि किसी पिंड पर शुद्ध बाह्य बल शून्य है, तो इसमें क्या है?",
+            options: ["Zero velocity", "Zero acceleration", "Non-zero acceleration", "None"],
+            hindiOptions: [],
+            answer: "Zero acceleration",
+            hindiAnswer: ""
+        },
+        {
+            question: "What is the volume of a sphere with radius 7 cm? (Use π = 22/7)",
+            hindiQuestion: "",
+            options: ["1436 cm^3", "1446 cm^3", "1436.5 cm^3", "1446.5 cm^3"],
+            hindiOptions: [],
+            answer: "1436 cm^3",
+            hindiAnswer: ""
+        },
+        {
+            question: "A sentence expressing strong emotion is called?",
+            hindiQuestion: "",
+            options: ["Declarative", "Interrogative", "Imperative", "Exclamatory"],
+            hindiOptions: [],
+            answer: "Exclamatory",
+            hindiAnswer: ""
+        },
+        {
+            question: "PDA stands for?",
+            hindiQuestion: "पीडीए का मतलब क्या है?",
+            options: [
+                "Personal Digital Applications",
+                "Private Digital Applications",
+                "Personal Digital Assistants",
+                "Private Digital Assistants"
+            ],
+            hindiOptions: [],
+            answer: "Personal Digital Assistants",
+            hindiAnswer: ""
+        },
+        {
+            question: "Hydroelectric power plants generate electricity using the energy of?",
+            hindiQuestion: "जलविद्युत संयंत्र किसकी ऊर्जा का उपयोग करके बिजली उत्पन्न करते हैं?",
+            options: ["Fossil fuel", "Tides", "Wind", "Falling water"],
+            hindiOptions: [],
+            answer: "Falling water",
+            hindiAnswer: ""
+        },
+        {
+            question: "Sound travels through which medium?",
+            hindiQuestion: "ध्वनि किस माध्यम से यात्रा करती है?",
+            options: ["Solid", "Liquid", "Gas", "All of the above"],
+            hindiOptions: ["ठोस", "तरल", "गैस", "उपरोक्त सभी"],
+            answer: "All of the above",
+            hindiAnswer: "उपरोक्त सभी"
+        }
+    ];
+
+    */
+
+
+
+    // Round 2 all questions
+
+    const originalQuestions = [
+        {
+            question: "What is the value of (sin 300° + cos 600°) - (sin 600° + cos 300°)?",
+            hindiQuestion: "",
+            options: ["1 + √2", "1 + 2√2", "1 + √3", "1 + 2√3"],
+            hindiOptions: [],
+            answer: "1 + √3",
+            hindiAnswer: ""
         },
         {
             question: "If the sum of two sides of an equilateral triangle is 16 cm, then find the third side.",
@@ -123,12 +269,12 @@ const QuizComponent = () => {
             hindiAnswer: "रक्त प्लाज्मा"
         },
         {
-            question: "Sound travels through which medium?",
-            hindiQuestion: "ध्वनि किस माध्यम से यात्रा करती है?",
-            options: ["Solid", "Liquid", "Gas", "All the above"],
-            hindiOptions: ["ठोस", "तरल", "गैस", "सभी"],
-            answer: "All the above",
-            hindiAnswer: "सभी"
+            question: "",
+            hindiQuestion: "भारतीय संस्कृति में पहला पुरुषार्थ किसे माना गया है?",
+            options: ["Moksha", "Kaam", "Dharma", "Artha"],
+            hindiOptions: ["मोक्ष", "काम", "धर्म", "अर्थ"],
+            answer: "Kaam",
+            hindiAnswer: "काम"
         },
         {
             question: "Which word is an example of a conjunction?",
@@ -479,7 +625,7 @@ const QuizComponent = () => {
                                 <div className="p-8 bg-white rounded-lg shadow-lg">
                                     <h2 className="text-2xl font-bold text-center text-blue-600">Quiz Results</h2>
                                     <p className="mt-4 text-lg text-center">
-                                        Thank you! 
+                                        Thank you!
                                     </p>
                                     <button
                                         onClick={() => handleShowResult()}
@@ -496,10 +642,6 @@ const QuizComponent = () => {
         </>
 
     );
-
-
-
-
 };
 
 export default QuizComponent;
