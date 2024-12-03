@@ -479,7 +479,7 @@ const QuizComponent = () => {
                                 <div className="p-8 bg-white rounded-lg shadow-lg">
                                     <h2 className="text-2xl font-bold text-center text-blue-600">Quiz Results</h2>
                                     <p className="mt-4 text-lg text-center">
-                                        Thank you! You answered {correctCount} out of {questions.length} questions correctly!
+                                        Thank you! 
                                     </p>
                                     <button
                                         onClick={() => handleShowResult()}
