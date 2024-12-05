@@ -82,7 +82,7 @@ const QuizComponent = () => {
 
     // round 3 all question
 
-    /*
+    
     const originalQuestions = [
         {
             question: "Find the HCF of 48 and 180.",
@@ -221,134 +221,134 @@ const QuizComponent = () => {
         }
     ];
 
-    */
+    
 
 
 
     // Round 2 all questions
 
-    const originalQuestions = [
-        {
-            question: "What is the value of (sin 300° + cos 600°) - (sin 600° + cos 300°)?",
-            hindiQuestion: "",
-            options: ["1 + √2", "1 + 2√2", "1 + √3", "1 + 2√3"],
-            hindiOptions: [],
-            answer: "1 + √3",
-            hindiAnswer: ""
-        },
-        {
-            question: "If the sum of two sides of an equilateral triangle is 16 cm, then find the third side.",
-            hindiQuestion: "यदि एक समबाहु त्रिभुज की दो भुजाओं का योग 16 सेमी है, तो तीसरी भुजा ज्ञात कीजिए।",
-            options: ["4 cm", "16 cm", "Cannot be found", "8 cm"],
-            hindiOptions: ["4 सेमी", "16 सेमी", "ज्ञात नहीं किया जा सकता", "8 सेमी"],
-            answer: "8 cm",
-            hindiAnswer: "8 सेमी"
-        },
-        {
-            question: "What is the sum of all angles of a hexagon?",
-            hindiQuestion: "षट्भुज के सभी कोणों का योग कितना होता है?",
-            options: ["540°", "720°", "900°", "1080°"],
-            hindiOptions: [],
-            answer: "720°",
-            hindiAnswer: "720°"
-        },
-        {
-            question: "Genetics is a study of:",
-            hindiQuestion: "जेनेटिक्स एक अध्ययन है:",
-            options: ["Development of organisms", "Mechanism of inheritance", "Nuclear division", "Variation between species"],
-            hindiOptions: ["जीवों का विकास", "विरासत की प्रक्रिया", "कोशिका विभाजन", "प्रजातियों के बीच भिन्नता"],
-            answer: "Mechanism of inheritance",
-            hindiAnswer: "विरासत की प्रक्रिया"
-        },
-        {
-            question: "The pH of which of the following is more than 7?",
-            hindiQuestion: "निम्नलिखित में से किसका pH मान 7 से अधिक है?",
-            options: ["Gastric Juice", "Vinegar", "Blood plasma", "Lemon Juice"],
-            hindiOptions: ["जठर रस", "सिरका", "रक्त प्लाज्मा", "नींबू का रस"],
-            answer: "Blood plasma",
-            hindiAnswer: "रक्त प्लाज्मा"
-        },
-        {
-            question: "",
-            hindiQuestion: "भारतीय संस्कृति में पहला पुरुषार्थ किसे माना गया है?",
-            options: ["Moksha", "Kaam", "Dharma", "Artha"],
-            hindiOptions: ["मोक्ष", "काम", "धर्म", "अर्थ"],
-            answer: "Kaam",
-            hindiAnswer: "काम"
-        },
-        {
-            question: "Which word is an example of a conjunction?",
-            hindiQuestion: "",
-            options: ["Because", "Very", "Quickly", "House"],
-            hindiOptions: [],
-            answer: "Because",
-            hindiAnswer: "क्योंकि"
-        },
-        {
-            question: "She sings ________ beautifully that everyone enjoys her performances.",
-            hindiQuestion: "",
-            options: ["so", "too", "such", "very"],
-            hindiOptions: [],
-            answer: "so",
-            hindiAnswer: "इतना"
-        },
-        {
-            question: "What is the correct plural form of the word 'cactus'?",
-            hindiQuestion: "'",
-            options: ["Cacti", "Cactuss", "Cactusies", "Cactuses"],
-            hindiOptions: [],
-            answer: "Cacti",
-            hindiAnswer: "कैकटस"
-        },
-        {
-            question: "The Dronacharya Award is awarded in which category of sports?",
-            hindiQuestion: "द्रोणाचार्य पुरस्कार खेल की किस श्रेणी में प्रदान किया जाता है?",
-            options: ["Players", "Coach", "Umpires", "Sports Journalists"],
-            hindiOptions: ["खिलाड़ी", "कोच", "अंपायर", "खेल पत्रकार"],
-            answer: "Coach",
-            hindiAnswer: "कोच"
-        },
-        {
-            question: "Usain Bolt is considered the greatest sprinter of all times. Which country does he belong to?",
-            hindiQuestion: "उसेन बोल्ट को सर्वकालिक महान धावक माना जाता है। वह किस देश के हैं?",
-            options: ["USA", "Kenya", "Jamaica", "Nigeria"],
-            hindiOptions: ["यूएसए", "केन्या", "जमैका", "नाइजीरिया"],
-            answer: "Jamaica",
-            hindiAnswer: "जमैका"
-        },
-        {
-            question: "Which poet is known as the National Poet?",
-            hindiQuestion: "किस कवि को राष्ट्र कवि कहा जाता है?",
-            options: ["Makhanlal Chaturvedi", "Maithili Sharan Gupt", "Subhadra Kumari Chauhan", "None of these"],
-            hindiOptions: ["माखनलाल चतुर्वेदी", "मैथिलीशरण गुप्त", "सुभद्राकुमारी चौहान", "इनमें से कोई नहीं"],
-            answer: "Maithili Sharan Gupt",
-            hindiAnswer: "मैथिलीशरण गुप्त"
-        },
-        {
-            question: "",
-            hindiQuestion: "शब्दयुग्म का अर्थ है?",
-            options: ["शब्दों का जोड़ा", "शब्द का प्रयोग", "शब्दों की गिनती", "शब्दों की व्याख्या"],
-            hindiOptions: [],
-            answer: "Pair of words",
-            hindiAnswer: "शब्दों का जोड़ा"
-        },
-        {
-            question: "What is the smallest unit of digital information?",
-            hindiQuestion: "डिजिटल सूचना की सबसे छोटी इकाई क्या है?",
-            options: ["Bit", "Byte", "Pixel", "Kilobyte"],
-            hindiOptions: ["बिट", "बाइट", "पिक्सेल", "किलोबाइट"],
-            answer: "Bit",
-            hindiAnswer: "बिट"
-        },
-        {
-            question: "Which device is used to convert analog signals into digital signals?",
-            hindiQuestion: "एनालॉग सिग्नल को डिजिटल सिग्नल में बदलने के लिए किस उपकरण का उपयोग किया जाता है?",
-            options: ["Modem", "Scanner", "Printer", "Speaker"],
-            hindiOptions: ["मोडेम", "स्कैनर", "प्रिंटर", "स्पीकर"],
-            answer: "Modem",
-            hindiAnswer: "मोडेम"
-        }
-    ];
+    // const originalQuestions = [
+    //     {
+    //         question: "What is the value of (sin 300° + cos 600°) - (sin 600° + cos 300°)?",
+    //         hindiQuestion: "",
+    //         options: ["1 + √2", "1 + 2√2", "1 + √3", "1 + 2√3"],
+    //         hindiOptions: [],
+    //         answer: "1 + √3",
+    //         hindiAnswer: ""
+    //     },
+    //     {
+    //         question: "If the sum of two sides of an equilateral triangle is 16 cm, then find the third side.",
+    //         hindiQuestion: "यदि एक समबाहु त्रिभुज की दो भुजाओं का योग 16 सेमी है, तो तीसरी भुजा ज्ञात कीजिए।",
+    //         options: ["4 cm", "16 cm", "Cannot be found", "8 cm"],
+    //         hindiOptions: ["4 सेमी", "16 सेमी", "ज्ञात नहीं किया जा सकता", "8 सेमी"],
+    //         answer: "8 cm",
+    //         hindiAnswer: "8 सेमी"
+    //     },
+    //     {
+    //         question: "What is the sum of all angles of a hexagon?",
+    //         hindiQuestion: "षट्भुज के सभी कोणों का योग कितना होता है?",
+    //         options: ["540°", "720°", "900°", "1080°"],
+    //         hindiOptions: [],
+    //         answer: "720°",
+    //         hindiAnswer: "720°"
+    //     },
+    //     {
+    //         question: "Genetics is a study of:",
+    //         hindiQuestion: "जेनेटिक्स एक अध्ययन है:",
+    //         options: ["Development of organisms", "Mechanism of inheritance", "Nuclear division", "Variation between species"],
+    //         hindiOptions: ["जीवों का विकास", "विरासत की प्रक्रिया", "कोशिका विभाजन", "प्रजातियों के बीच भिन्नता"],
+    //         answer: "Mechanism of inheritance",
+    //         hindiAnswer: "विरासत की प्रक्रिया"
+    //     },
+    //     {
+    //         question: "The pH of which of the following is more than 7?",
+    //         hindiQuestion: "निम्नलिखित में से किसका pH मान 7 से अधिक है?",
+    //         options: ["Gastric Juice", "Vinegar", "Blood plasma", "Lemon Juice"],
+    //         hindiOptions: ["जठर रस", "सिरका", "रक्त प्लाज्मा", "नींबू का रस"],
+    //         answer: "Blood plasma",
+    //         hindiAnswer: "रक्त प्लाज्मा"
+    //     },
+    //     {
+    //         question: "",
+    //         hindiQuestion: "भारतीय संस्कृति में पहला पुरुषार्थ किसे माना गया है?",
+    //         options: ["Moksha", "Kaam", "Dharma", "Artha"],
+    //         hindiOptions: ["मोक्ष", "काम", "धर्म", "अर्थ"],
+    //         answer: "Kaam",
+    //         hindiAnswer: "काम"
+    //     },
+    //     {
+    //         question: "Which word is an example of a conjunction?",
+    //         hindiQuestion: "",
+    //         options: ["Because", "Very", "Quickly", "House"],
+    //         hindiOptions: [],
+    //         answer: "Because",
+    //         hindiAnswer: "क्योंकि"
+    //     },
+    //     {
+    //         question: "She sings ________ beautifully that everyone enjoys her performances.",
+    //         hindiQuestion: "",
+    //         options: ["so", "too", "such", "very"],
+    //         hindiOptions: [],
+    //         answer: "so",
+    //         hindiAnswer: "इतना"
+    //     },
+    //     {
+    //         question: "What is the correct plural form of the word 'cactus'?",
+    //         hindiQuestion: "'",
+    //         options: ["Cacti", "Cactuss", "Cactusies", "Cactuses"],
+    //         hindiOptions: [],
+    //         answer: "Cacti",
+    //         hindiAnswer: "कैकटस"
+    //     },
+    //     {
+    //         question: "The Dronacharya Award is awarded in which category of sports?",
+    //         hindiQuestion: "द्रोणाचार्य पुरस्कार खेल की किस श्रेणी में प्रदान किया जाता है?",
+    //         options: ["Players", "Coach", "Umpires", "Sports Journalists"],
+    //         hindiOptions: ["खिलाड़ी", "कोच", "अंपायर", "खेल पत्रकार"],
+    //         answer: "Coach",
+    //         hindiAnswer: "कोच"
+    //     },
+    //     {
+    //         question: "Usain Bolt is considered the greatest sprinter of all times. Which country does he belong to?",
+    //         hindiQuestion: "उसेन बोल्ट को सर्वकालिक महान धावक माना जाता है। वह किस देश के हैं?",
+    //         options: ["USA", "Kenya", "Jamaica", "Nigeria"],
+    //         hindiOptions: ["यूएसए", "केन्या", "जमैका", "नाइजीरिया"],
+    //         answer: "Jamaica",
+    //         hindiAnswer: "जमैका"
+    //     },
+    //     {
+    //         question: "Which poet is known as the National Poet?",
+    //         hindiQuestion: "किस कवि को राष्ट्र कवि कहा जाता है?",
+    //         options: ["Makhanlal Chaturvedi", "Maithili Sharan Gupt", "Subhadra Kumari Chauhan", "None of these"],
+    //         hindiOptions: ["माखनलाल चतुर्वेदी", "मैथिलीशरण गुप्त", "सुभद्राकुमारी चौहान", "इनमें से कोई नहीं"],
+    //         answer: "Maithili Sharan Gupt",
+    //         hindiAnswer: "मैथिलीशरण गुप्त"
+    //     },
+    //     {
+    //         question: "",
+    //         hindiQuestion: "शब्दयुग्म का अर्थ है?",
+    //         options: ["शब्दों का जोड़ा", "शब्द का प्रयोग", "शब्दों की गिनती", "शब्दों की व्याख्या"],
+    //         hindiOptions: [],
+    //         answer: "Pair of words",
+    //         hindiAnswer: "शब्दों का जोड़ा"
+    //     },
+    //     {
+    //         question: "What is the smallest unit of digital information?",
+    //         hindiQuestion: "डिजिटल सूचना की सबसे छोटी इकाई क्या है?",
+    //         options: ["Bit", "Byte", "Pixel", "Kilobyte"],
+    //         hindiOptions: ["बिट", "बाइट", "पिक्सेल", "किलोबाइट"],
+    //         answer: "Bit",
+    //         hindiAnswer: "बिट"
+    //     },
+    //     {
+    //         question: "Which device is used to convert analog signals into digital signals?",
+    //         hindiQuestion: "एनालॉग सिग्नल को डिजिटल सिग्नल में बदलने के लिए किस उपकरण का उपयोग किया जाता है?",
+    //         options: ["Modem", "Scanner", "Printer", "Speaker"],
+    //         hindiOptions: ["मोडेम", "स्कैनर", "प्रिंटर", "स्पीकर"],
+    //         answer: "Modem",
+    //         hindiAnswer: "मोडेम"
+    //     }
+    // ];
 
 
 
