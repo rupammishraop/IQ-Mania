@@ -542,7 +542,7 @@ const QuizComponent = () => {
                         {!showIntroModal && (
                             <div className="z-10 w-full max-w-3xl p-8 bg-gray-100 rounded-lg shadow-2xl mb-10">
                                 <h2 className="text-3xl font-bold text-center text-blue-600">Quiz Time</h2>
-                                <h2 className="text-3xl font-bold text-center text-blue-600">Round-2</h2>
+                                <h2 className="text-3xl font-bold text-center text-blue-600">Round-3</h2>
                                 <div className="text-3xl font-bold text-black mt-4 text-center">
                                     Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
                                 </div>
